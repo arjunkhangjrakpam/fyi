@@ -7,13 +7,5 @@ from django.http import HttpResponse
 	
 
 def index(request):
-    return HttpResponse("WELCOME TO DJANGO BLOG")
-	#return render(request, 'blog/index.html')
+	return render(request, 'blog/index.html')
 
-def setup(request):
-	context = {
-
-	'posts' : Post.objects.all()
-
-	}
-	return render(request, 'blog/setup.html',context)
