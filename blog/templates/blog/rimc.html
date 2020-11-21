@@ -1,0 +1,32 @@
+{% extends "blog/base.html" %}
+
+{% block title %}
+RIMC 
+{% endblock %}
+
+{% block content %}
+<section>
+		 {% for post in posts %}
+		<h1>{{ post.title }}</h1>
+		<p>By {{ post.author }} on {{ post.date_posted }}</p>
+	    <p>{{post.content }}</p>
+		 {% endfor %}
+	
+</section>
+
+<section>
+	<form action="" method="post">
+		<p>
+			Please submit your Blog :
+			<input type="text" name="url">
+        </p>
+        <p>
+            <button type="submit">Submit</button>
+        </p>
+	</form>
+</section>
+
+{% endblock %}
+
+{% block footer %}
+{% endblock %}

@@ -10,6 +10,10 @@ from . import views
 
 urlpatterns = [
 	path('', views.index, name='index'),
+	path('nda_na',views.nda_na, name='nda_na'),
+	path('rimc',views.rimc, name='rimc'),
+	path('ssb',views.ssb, name='ssb'),
+
 	#path('setup', PostListView.as_view(), name='setup'),
 	#path('register/', user_views.register, name='register'),
 	#path('login/', auth_views.LoginView.as_view(template_name='users/login.html'), name='login'),

@@ -7,5 +7,50 @@ from django.http import HttpResponse
 	
 
 def index(request):
-	return render(request, 'blog/index.html')
+    return render(request, 'blog/index.html')
+
+
+posts = [
+
+{
+  'author' : 'Loonycorn',
+  'title' : 'Blog Post 1',
+  'content' : 'First post content',
+  'date_posted' : 'October 25, 2019'
+},
+{
+  'author' : 'Test',
+  'title' : 'Blog Post 2',
+  'content' : 'Second post content',
+  'date_posted' : 'October 26, 2019'
+}
+
+]	
+
+
+
+def nda_na(request):
+	context = {
+
+  'posts' : posts
+
+   }
+	return render(request, 'blog/nda_na.html',context)
+
+def rimc(request):
+	context = {
+
+  'posts' : posts
+
+   }
+	return render(request, 'blog/rimc.html',context)
+
+def ssb(request):
+	context = {
+
+  'posts' : posts
+
+   }
+	return render(request, 'blog/ssb.html',context)
+
 
