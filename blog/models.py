@@ -29,7 +29,7 @@ class Post_rimc(models.Model):
 		
 
 	def get_absolute_url(self):
-		return reverse('post-detail', kwargs={'pk': self.pk})
+		return reverse('post_rimc-detail', kwargs={'pk': self.pk})
 
 class Post_ssb(models.Model):
 	title = models.CharField(max_length=100)
@@ -42,5 +42,5 @@ class Post_ssb(models.Model):
 		
 
 	def get_absolute_url(self):
-		return reverse('post-detail', kwargs={'pk': self.pk})
+		return reverse('post_ssb-detail', kwargs={'pk': self.pk})
 

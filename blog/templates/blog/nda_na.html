@@ -14,7 +14,7 @@ NDA-NA
 	 			<a href="#">{{ post.author }}</a>
 	 			<small>{{ post.date_posted}}</small>
 	 		</div>
-	 		<h2><a href="#">{{ post.title }}</a></h2>
+	 		<h2><a href="{% url 'post-detail' post.id %}">{{ post.title }}</a></h2>
 	 		<p>{{ post.content }}</p>
 	 	</div>
 	 </article>
@@ -24,15 +24,11 @@ NDA-NA
 </section>
 
 <section class="container">
-	<form action="" method="post">
-		<p>
-			Please submit your Blog :
-			<input type="text" name="url">
-    </p>
-    <p>
-        <button type="submit">Submit</button>
-    </p>
-	</form>
+	<div c>
+	<section>
+		<a href="{% url 'post-create' %">Click here to create a new post</a>
+	</section>
+	</div>
 </section>
 
 {% endblock %}

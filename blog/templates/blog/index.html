@@ -9,7 +9,7 @@ Welcome
       <div class="container">
         <h1>Welcome to Amazing Blogs!</h1>
         <p>Raise your thoughts, not your voice</p>
-        <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>
+        <p><a class="btn btn-primary btn-lg" href="{% url 'about' %}" role="button">Learn more &raquo;</a></p>
       </div>
     </div>
 {% if user.is_authenticated %}

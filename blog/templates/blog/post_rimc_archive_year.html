@@ -1,0 +1,25 @@
+{% extends "blog/base.html" %}
+{% load crispy_forms_tags %}
+
+{% block title %}
+RIMC Archive Blog
+{% endblock %}
+
+
+{% block content %}
+<div class="container">
+<section>
+	<div>
+		<h1>All RIMC Articles for {{ year|date:"Y" }}</h1>
+		{% for obj in object_list %}
+			<p>
+				<li>{{ obj.title }} - {{ obj.date_posted|date:"F j, Y"}}</li>
+			</p>
+		{% endfor %}
+	</div>
+</section>
+</div>
+
+{% endblock %}
+{% block footer %}
+{% endblock %}

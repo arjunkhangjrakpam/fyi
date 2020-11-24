@@ -29,11 +29,13 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="/">Django Blog</a>
+          <a class="navbar-brand" href="/">FYI Academy</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
             {% if user.is_authenticated %}
                 <form class="navbar-form navbar-right" role="form">
+                  <a class="btn btn-success" href="{% url 'profile' %}" role="button">Profile</a>
+
                   <a class="btn btn-success" href="{% url 'logout' %}" role="button">Sign out</a>
                 </form>
 
